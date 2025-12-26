@@ -27,8 +27,10 @@ a:hover{ opacity: .9; }
 }
 
 .header{
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 50;
   backdrop-filter: blur(10px);
   background: rgba(10,14,28,.55);
@@ -63,6 +65,11 @@ a:hover{ opacity: .9; }
 }
 
 .hero{ padding-top: 0; }
+
+/* 给页面主内容向下留出与 header 等高的空间，避免被固定 header 遮挡 */
+main{
+  padding-top: 64px;
+}
 .carousel{
   position: relative;
   height: clamp(360px, 52vw, 560px);

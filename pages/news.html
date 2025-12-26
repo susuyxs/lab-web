@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JRZ-LAB | Brain-Computer Interface Lab</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- 可复用 header 占位（由 /main.js 动态注入） -->
+  <div id="header"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>News</h2>
+        <p class="lead">实验室最新动态；文章可以包含图片或仅为文本更新。</p>
+
+        <div style="margin-top:18px; display:flex; flex-direction:column; gap:14px;">
+          <article class="card">
+            <div class="grid-2" style="align-items:stretch; gap:12px;">
+              <div style="min-width:200px;">
+                <img src="../images/news1.jpg" alt="News image 1" style="width:100%; height:140px; object-fit:cover; border-radius:12px;" />
+              </div>
+              <div>
+                <h3>2025-12-01 — 开放数据集发布</h3>
+                <p class="lead" style="margin-top:8px;">我们发布了新的 EEG 数据集，便于可复现研究与算法比较。</p>
+                <p style="margin-top:12px;"><a class="btn" href="#">阅读详情</a></p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>2025-11-20 — 实验室招募：研究助理</h3>
+            <p class="lead" style="margin-top:8px;">正在招募对神经工程与嵌入式系统感兴趣的研究助理。</p>
+            <p style="margin-top:12px;"><a class="btn" href="mailto:lab@example.com?subject=Application">通过邮件申请</a></p>
+          </article>
+
+          <article class="card">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <div style="flex:1;">
+                <h4>会议海报被接收</h4>
+                <p class="lead">我们的工作在国际会议上被接收为海报展示，展示了闭环刺激的新方法。</p>
+              </div>
+              <div style="width:140px;">
+                <img src="../images/news2.jpg" alt="poster" style="width:100%; height:80px; object-fit:cover; border-radius:8px;" />
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h4>代码库小幅重构</h4>
+            <p class="lead">我们对公开仓库做了重构，改进了数据加载效率与测试覆盖。</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 可复用 footer 占位 -->
+  <div id="footer"></div>
+
+  <script src="../main.js"></script>
+</body>
+</html>
+ 
