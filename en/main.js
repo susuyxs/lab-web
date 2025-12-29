@@ -1,6 +1,6 @@
 // 动态加载可复用 header
 function loadHeader() {
-  return fetch('/components/header.html')
+  return fetch('/en/components/header.html')
     .then((res) => {
       if (!res.ok) throw new Error('Failed to load header');
       return res.text();
@@ -15,6 +15,24 @@ function loadHeader() {
 function init() {
   // 顶部年份
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // 语言选择器
+  const langSelect = document.getElementById("lang-select");
+  if (langSelect) {
+    langSelect.value = "en"; // 默认选择 EN
+    langSelect.addEventListener("change", (e) => {
+      const lang = e.target.value;
+      const currentPath = window.location.pathname;
+      let newPath;
+      if (lang === "zh") {
+        newPath = currentPath.replace(/^\/en/, "/ch");
+      } else {
+        // 已经是 en，保持
+        return;
+      }
+      window.location.href = newPath;
+    });
+  }
 
   // 移动端菜单
   const toggleBtn = document.querySelector(".nav-toggle");
@@ -125,7 +143,7 @@ function init() {
 
 // 动态加载可复用 footer
 function loadFooter() {
-  return fetch('/components/footer.html')
+  return fetch('/en/components/footer.html')
     .then((res) => {
       if (!res.ok) throw new Error('Failed to load footer');
       return res.text();
