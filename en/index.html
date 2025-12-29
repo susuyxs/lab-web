@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>JRZ-LAB | Brain-Computer Interface Lab</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="../common/style.css" />
 </head>
 
 <body>
@@ -16,8 +16,9 @@
     <section class="hero">
       <div class="carousel" data-autoplay="true" data-interval="4500">
         <div class="carousel-track">
+          
           <article class="slide is-active" aria-hidden="false">
-            <img src="./images/hero1.jpg" alt="实验室场景 1" />
+            <img src="../common/images/hero1.jpg" alt="实验室场景 1" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h1>Chongqing University of Technology Brain-Computer Interface Laboratory</h1>
@@ -30,7 +31,7 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="./images/hero2.jpg" alt="实验室场景 2" />
+            <img src="../common/images/hero2.jpg" alt="实验室场景 2" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>We build tools for understanding the brain</h2>
@@ -39,7 +40,7 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="./images/hero3.jpg" alt="实验室场景 3" />
+            <img src="../common/images/hero3.jpg" alt="实验室场景 3" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>Open, rigorous, and interdisciplinary</h2>
@@ -48,7 +49,7 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="./images/hero3.jpg" alt="实验室场景 4" />
+            <img src="../common/images/hero3.jpg" alt="实验室场景 4" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>Open, rigorous, and interdisciplinary</h2>
@@ -161,7 +162,27 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="news" class="section">
+      <div class="container">
+        <h2>News</h2>
+        <p class="lead">实验室最新动态</p>
+        <div class="news-list" style="display:flex; flex-direction:column; gap:14px;">
+          <article class="card">
+            <h3>2025-12-01 — Open Dataset Release</h3>
+            <p>We have released a new EEG dataset to facilitate reproducible research and algorithm comparison.</p>
+            <p style="margin-top:12px;"><a class="btn" href="pages/news.html">Read more</a></p>
+          </article>
+          <article class="card">
+            <h3>2025-11-20 — Lab Recruitment: Research Assistant</h3>
+            <p>We are recruiting research assistants interested in neural engineering and embedded systems.</p>
+            <p style="margin-top:12px;"><a class="btn" href="mailto:lab@example.com?subject=Application">Apply via email</a></p>
+          </article>
+        </div>
+        <p><a class="btn" href="pages/news.html">View all news</a></p>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
         <div class="grid-2">
@@ -184,6 +205,6 @@
   <!-- 可复用 footer 占位（将由 main.js 动态注入） -->
   <div id="footer"></div>
 
-  <script src="./main.js"></script>
+  <script src="../common/main.js"></script>
 </body>
 </html>

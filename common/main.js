@@ -1,6 +1,15 @@
+// 获取当前语言版本
+function getCurrentLang() {
+  const path = window.location.pathname;
+  if (path.startsWith('/en')) return 'en';
+  if (path.startsWith('/zh')) return 'zh';
+  return 'zh'; // 默认中文
+}
+
 // 动态加载可复用 header
 function loadHeader() {
-  return fetch('/en/components/header.html')
+  const lang = getCurrentLang();
+  return fetch(`/${lang}/components/header.html`)
     .then((res) => {
       if (!res.ok) throw new Error('Failed to load header');
       return res.text();
@@ -19,18 +28,20 @@ function init() {
   // 语言选择器
   const langSelect = document.getElementById("lang-select");
   if (langSelect) {
-    langSelect.value = "en"; // 默认选择 EN
+    const currentLang = getCurrentLang();
+    langSelect.value = currentLang;
     langSelect.addEventListener("change", (e) => {
       const lang = e.target.value;
       const currentPath = window.location.pathname;
-      let newPath;
-      if (lang === "zh") {
-        newPath = currentPath.replace(/^\/en/, "/ch");
-      } else {
-        // 已经是 en，保持
-        return;
+      let newPath = currentPath;
+      if (lang === "en" && currentLang === "zh") {
+        newPath = currentPath.replace(/^\/zh/, "/en");
+      } else if (lang === "zh" && currentLang === "en") {
+        newPath = currentPath.replace(/^\/en/, "/zh");
       }
-      window.location.href = newPath;
+      if (newPath !== currentPath) {
+        window.location.href = newPath;
+      }
     });
   }
 
@@ -143,7 +154,8 @@ function init() {
 
 // 动态加载可复用 footer
 function loadFooter() {
-  return fetch('/en/components/footer.html')
+  const lang = getCurrentLang();
+  return fetch(`/${lang}/components/footer.html`)
     .then((res) => {
       if (!res.ok) throw new Error('Failed to load footer');
       return res.text();
