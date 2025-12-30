@@ -26,22 +26,41 @@ function init() {
   document.getElementById("year").textContent = new Date().getFullYear();
 
   // 语言选择器
-  const langSelect = document.getElementById("lang-select");
-  if (langSelect) {
+  const langButton = document.querySelector('.lang-button');
+  const langDropdown = document.querySelector('.lang-dropdown');
+  if (langButton && langDropdown) {
     const currentLang = getCurrentLang();
-    langSelect.value = currentLang;
-    langSelect.addEventListener("change", (e) => {
-      const lang = e.target.value;
-      const currentPath = window.location.pathname;
-      let newPath = currentPath;
-      if (lang === "en" && currentLang === "zh") {
-        newPath = currentPath.replace(/^\/zh/, "/en");
-      } else if (lang === "zh" && currentLang === "en") {
-        newPath = currentPath.replace(/^\/en/, "/zh");
-      }
-      if (newPath !== currentPath) {
-        window.location.href = newPath;
-      }
+    langButton.setAttribute('data-value', currentLang);
+    langButton.textContent = currentLang === 'zh' ? 'ZH 🇨🇳' : 'EN 🇬🇧';
+
+    // 点击按钮切换显示选项
+    langButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('open');
+    });
+
+    // 点击选项选择语言
+    const langOptions = document.querySelectorAll('.lang-options li');
+    langOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        const selectedLang = option.getAttribute('data-value');
+        const currentPath = window.location.pathname;
+        let newPath = currentPath;
+        if (selectedLang === "en" && currentLang === "zh") {
+          newPath = currentPath.replace(/^\/zh/, "/en");
+        } else if (selectedLang === "zh" && currentLang === "en") {
+          newPath = currentPath.replace(/^\/en/, "/zh");
+        }
+        if (newPath !== currentPath) {
+          window.location.href = newPath;
+        }
+        langDropdown.classList.remove('open');
+      });
+    });
+
+    // 点击其他地方关闭下拉
+    document.addEventListener('click', () => {
+      langDropdown.classList.remove('open');
     });
   }
 
@@ -104,7 +123,7 @@ function init() {
     if (!carousel) return;
     const autoplay = carousel.dataset.autoplay === "true";
     const interval = Number(carousel.dataset.interval || 4500);
-    if (!autoplay) return;
+    if (!autoplay || timer) return; // 防止多个timer
     timer = setInterval(() => next(false), interval);
   }
   function stopAutoplay() {

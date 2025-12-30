@@ -10,10 +10,13 @@
       <a href="/en/#contact">Contact</a>
     </nav>
     <div class="lang-selector">
-      <select id="lang-select">
-        <option value="zh">ZH 🇨🇳</option>
-        <option value="en">EN 🇬🇧</option>
-      </select>
+      <div class="lang-dropdown">
+        <button class="lang-button" data-value="en">EN 🇬🇧</button>
+        <ul class="lang-options">
+          <li data-value="zh">ZH 🇨🇳</li>
+          <li data-value="en">EN 🇬🇧</li>
+        </ul>
+      </div>
     </div>
     <button class="nav-toggle" aria-label="open the menu" aria-expanded="false">☰</button>
   </div>
