@@ -31,7 +31,7 @@ function init() {
   if (langButton && langDropdown) {
     const currentLang = getCurrentLang();
     langButton.setAttribute('data-value', currentLang);
-    langButton.textContent = currentLang === 'zh' ? 'ZH 🇨🇳' : 'EN 🇬🇧';
+    langButton.textContent = currentLang === 'zh' ? '简体中文 🇨🇳' : 'English 🇬🇧';
 
     // 点击按钮切换显示选项
     langButton.addEventListener('click', (e) => {

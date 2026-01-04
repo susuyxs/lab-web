@@ -80,12 +80,15 @@ main{
 .carousel-track{
   height: 100%;
   display:flex;
+  width: 100%;
   transition: transform .6s ease;
 }
 .slide{
   position: relative;
+  flex: 0 0 100%;
   min-width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .slide img{
   width: 100%;
