@@ -16,9 +16,8 @@
     <section class="hero">
       <div class="carousel" data-autoplay="true" data-interval="4500">
         <div class="carousel-track">
-
           <article class="slide is-active" aria-hidden="false">
-            <img src="../common/images/hero0.png" alt="Main image" />
+            <img src="../common/images/hero/hero0.png" alt="Main image" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h1>Chongqing University of Technology Brain-Computer Interface Laboratory</h1>
@@ -31,7 +30,7 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="../common/images/heroGroupMeeting.jpg" alt="Group meeting scene" />
+            <img src="../common/images/hero/heroGroupMeeting.jpg" alt="Group meeting scene" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>Group meeting</h2>
@@ -40,7 +39,7 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="../common/images/heroLab1.jpg" alt="Laboratory scene 1" />
+            <img src="../common/images/hero/heroLab1.jpg" alt="Laboratory scene 1" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>We build tools for understanding the brain</h2>
@@ -49,109 +48,115 @@
           </article>
 
           <article class="slide" aria-hidden="true">
-            <img src="../common/images/heroLab2.jpg" alt="Laboratory scene 2" />
+            <img src="../common/images/hero/heroLab2.jpg" alt="Laboratory scene 2" />
             <div class="slide-overlay"></div>
             <div class="slide-content container">
               <h2>Open, rigorous, and interdisciplinary</h2>
               <p>Engineering × Neuroscience × Medicine</p>
             </div>
           </article>
-
         </div>
 
-        <!-- 控制按钮 -->
+        <!-- Carousel controls -->
         <button class="carousel-btn prev" aria-label="Previous image">‹</button>
         <button class="carousel-btn next" aria-label="Next image">›</button>
-
         <!-- 小圆点 -->
         <div class="carousel-dots" aria-label="Carousel indicator"></div>
       </div>
     </section>
 
-    <!-- 内容区 -->
+    <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
         <p class="lead">
-          我们关注脑机接口与神经工程：神经信号采集与解码、闭环刺激、可穿戴与临床转化。
+          We focus on brain-computer interfaces and neural engineering: neural signal acquisition and decoding, closed-loop stimulation, wearable and clinical translation.
         </p>
         <div class="grid-3">
           <div class="card">
             <h3>Mission</h3>
-            <p>让神经技术更可靠、更可用、更具可解释性。</p>
+            <p>Make neurotechnology more reliable, usable, and interpretable.</p>
           </div>
           <div class="card">
             <h3>Focus</h3>
-            <p>BCI decoding、神经刺激、神经调控与系统工程。</p>
+            <p>BCI decoding, neurostimulation, neuromodulation, and systems engineering.</p>
           </div>
           <div class="card">
             <h3>Open Science</h3>
-            <p>可复现 pipeline、数据与工具共享。</p>
+            <p>Reproducible pipeline, data and tool sharing.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Research Section -->
     <section id="research" class="section alt">
       <div class="container">
         <h2>Research</h2>
         <div class="grid-2">
           <div class="card">
             <h3>Neural Decoding</h3>
-            <p>EEG/iEEG 特征提取、时频分析、深度学习与可解释性。</p>
+            <p>EEG/iEEG feature extraction, time-frequency analysis, deep learning, and interpretability.</p>
           </div>
           <div class="card">
             <h3>Closed-loop Stimulation</h3>
-            <p>恒流刺激、刺激参数优化、触发逻辑与安全设计。</p>
+            <p>Constant current stimulation, parameter optimization, trigger logic, and safety design.</p>
           </div>
           <div class="card">
             <h3>Wearable Systems</h3>
-            <p>低功耗采集、无线传输、实时推理与边缘计算。</p>
+            <p>Low-power acquisition, wireless transmission, real-time inference, and edge computing.</p>
           </div>
           <div class="card">
             <h3>Clinical Translation</h3>
-            <p>Research范式、伦理合规、可用性与工程落地。</p>
+            <p>Research paradigms, ethics compliance, usability, and engineering implementation.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- People Section -->
     <section id="people" class="section">
       <div class="container">
         <h2>People</h2>
         <div class="people-grid" aria-label="Lab members">
           <div class="person">
-            <div class="avatar">PI</div>
+            <div class="avatar avatar-large">
+              <img src="../common/images/people/zjr.png" alt="Prof. JunRui Zhang" class="avatar-img" />
+            </div>
             <div>
-              <h3>Prof. JunRui Zhang</h3>
+              <h3><a href="pages/peopleInfo/zjr.html" target="_blank">Prof. JunRui Zhang</a></h3>
               <p>Principal Investigator</p>
             </div>
           </div>
           <div class="person">
             <div class="avatar">PhD</div>
             <div>
-              <h3>Student A</h3>
+              <h3><a href="pages/people.html#student-a">Student A</a></h3>
               <p>Neural decoding</p>
             </div>
           </div>
           <div class="person">
             <div class="avatar">MS</div>
             <div>
-              <h3>Student B</h3>
+              <h3><a href="pages/people.html#student-b">Student B</a></h3>
               <p>Stimulation hardware</p>
             </div>
           </div>
           <div class="person">
             <div class="avatar">RA</div>
             <div>
-              <h3>Student C</h3>
+              <h3><a href="pages/people.html#student-c">Student C</a></h3>
               <p>Wearable systems</p>
             </div>
           </div>
         </div>
+        <div style="margin-top:14px;">
+          <a class="btn" href="pages/people.html" target="_blank">View all</a>
+        </div>
       </div>
     </section>
 
+    <!-- Publications Section -->
     <section id="publications" class="section alt">
       <div class="container">
         <h2>Publications</h2>
@@ -163,15 +168,16 @@
       </div>
     </section>
 
+    <!-- News Section -->
     <section id="news" class="section">
       <div class="container">
         <h2>News</h2>
-        <p class="lead">实验室最新动态</p>
+        <p class="lead">Lab latest news</p>
         <div class="news-list" style="display:flex; flex-direction:column; gap:14px;">
           <article class="card">
             <h3>2025-12-01 — Open Dataset Release</h3>
             <p>We have released a new EEG dataset to facilitate reproducible research and algorithm comparison.</p>
-            <p style="margin-top:12px;"><a class="btn" href="pages/news.html">Read more</a></p>
+            <p style="margin-top:12px;"><a class="btn" href="pages/news.html" target="_blank">Read more</a></p>
           </article>
           <article class="card">
             <h3>2025-11-20 — Lab Recruitment: Research Assistant</h3>
@@ -179,23 +185,24 @@
             <p style="margin-top:12px;"><a class="btn" href="mailto:lab@example.com?subject=Application">Apply via email</a></p>
           </article>
         </div>
-        <p><a class="btn" href="pages/news.html">View all news</a></p>
+        <p><a class="btn" href="pages/news.html" target="_blank">View all news</a></p>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
         <div class="grid-2">
           <div class="card">
             <h3>Address</h3>
-            <p>你的学校/Research院地址</p>
+            <p>Your university/research institute address</p>
             <h3>Email</h3>
             <p><a href="mailto:lab@example.com">lab@example.com</a></p>
           </div>
           <div class="card">
             <h3>Join Us</h3>
-            <p>欢迎对 BCI/神经刺激/硬件系统感兴趣的同学加入。</p>
+            <p>Welcome students interested in BCI/neurostimulation/hardware systems to join.</p>
             <a class="btn primary" href="mailto:lab@example.com?subject=Join%20JRZ-LAB">Email Us</a>
           </div>
         </div>
@@ -205,7 +212,6 @@
 
   <!-- 可复用 footer 占位（将由 main.js 动态注入） -->
   <div id="footer"></div>
-
   <script src="../common/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,30 @@
+/* 仅个人简介页大头像放大 */
+.person-detail .avatar-large {
+  width: 128px !important;
+  height: 128px !important;
+}
+.person-detail .avatar-img {
+  width: 128px !important;
+  height: 128px !important;
+}
+/* 个人简介页样式 */
+.person-detail {
+  padding-top: 32px;
+}
+/* 大头像专用样式 */
+.avatar-large {
+  width: 96px !important;
+  height: 96px !important;
+  padding: 0;
+  overflow: hidden;
+}
+.avatar-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
 :root{
   --bg: #0b1020;
   --card: rgba(255,255,255,.06);
@@ -63,6 +90,7 @@ a:hover{ opacity: .9; }
   color: var(--text);
   padding: 8px 10px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .hero{ padding-top: 0; }
