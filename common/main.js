@@ -188,3 +188,5 @@ function loadFooter() {
 
 // 先并行加载 header 与 footer，再初始化页面脚本
 Promise.all([loadHeader(), loadFooter()]).then(init);
+
+// 语言选择器现在在.nav菜单内，移动端汉堡菜单会一起显示
