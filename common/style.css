@@ -1,30 +1,8 @@
-/* 仅个人简介页大头像放大 */
-.person-detail .avatar-large {
-  width: 128px !important;
-  height: 128px !important;
-}
-.person-detail .avatar-img {
-  width: 128px !important;
-  height: 128px !important;
-}
 /* 个人简介页样式 */
 .person-detail {
   padding-top: 32px;
 }
-/* 大头像专用样式 */
-.avatar-large {
-  width: 96px !important;
-  height: 96px !important;
-  padding: 0;
-  overflow: hidden;
-}
-.avatar-img {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-}
+
 :root{
   --bg: #0b1020;
   --card: rgba(255,255,255,.06);
@@ -67,7 +45,12 @@ body{
 }
 
 a{ color: inherit; text-decoration: none; }
-a:hover{ opacity: .9; }
+a:hover{ opacity: .85; }
+/* 键盘tab
+a:focus-visible{
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+} */
 
 .container{
   width: min(1100px, calc(100% - 32px));
@@ -112,6 +95,10 @@ a:hover{ opacity: .9; }
   border-radius: 12px;
   cursor: pointer;
 }
+.nav-toggle:hover{
+  background: rgba(255,255,255,.08);
+}
+
 
 .hero{ padding-top: 0; }
 
@@ -268,8 +255,8 @@ main{
   border-radius: 18px;
 }
 .avatar{
-  width: 48px;
-  height: 48px;
+  width: 96px;
+  height: 96px;
   border-radius: 16px;
   display:grid;
   place-items:center;
@@ -278,6 +265,16 @@ main{
   color: var(--muted);
   font-weight: 700;
 }
+.avatar-img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+
+
 
 .pub-list{ margin: 14px 0 0; padding-left: 18px; color: var(--muted); }
 .pub-list a{ text-decoration: underline; }
